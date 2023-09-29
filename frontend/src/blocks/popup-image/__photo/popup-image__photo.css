@@ -1,0 +1,13 @@
+.popup-image__photo {
+  max-height: 75vh;
+  max-width: 75vw;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+@media screen and (max-width: 629px){
+  .popup-image__photo {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}

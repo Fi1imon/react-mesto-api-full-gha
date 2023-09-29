@@ -1,0 +1,13 @@
+.header__logout-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: #A9A9A9;
+  background-color: #000;
+  max-width: 56px;
+  max-height: 22px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.popup__container {
+  margin: auto;
+  max-width: 510px;
+  max-height: 410px;
+  display: grid;
+  grid-template-columns:32px 8px 430px 8px 32px;
+  grid-template-rows: 32px 8px 1fr 8px 32px;
+}
+
+@media screen and (max-width: 629px){
+  .popup__container {
+    grid-template-columns:262px 20px;
+    grid-template-rows: 20px 16px 1fr 16px 20px;
+    max-width: 282px;
+    max-height: 394px;
+  }
+}

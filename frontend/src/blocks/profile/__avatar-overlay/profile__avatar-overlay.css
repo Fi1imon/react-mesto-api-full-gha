@@ -1,0 +1,22 @@
+.profile__avatar-overlay {
+  background-image: url('../../../images/avatar_edit.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity .3s;
+}
+
+.profile__avatar-overlay:hover {
+  cursor: pointer;
+  opacity: .8;
+  transition: opacity .3s;
+}

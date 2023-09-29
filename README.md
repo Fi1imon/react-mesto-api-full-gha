@@ -5,12 +5,12 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/Fi1imon/mesto-api-full-gha
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP 84.252.140.82
 
-Frontend https://...
+Frontend https://mesto.fi1imon.nomoredomainsicu.ru
 
-Backend https://...
+Backend https://api.mesto.fi1imon.nomoredomainsrocks.ru

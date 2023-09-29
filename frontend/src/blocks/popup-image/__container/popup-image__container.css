@@ -1,0 +1,13 @@
+.popup-image__container {
+  margin: auto;
+  display: grid;
+  grid-template-columns:32px 8px 1fr 8px 32px;
+  grid-template-rows: 32px 8px 1fr 10px 30px;
+}
+
+@media screen and (max-width: 629px){
+  .popup-image__container {
+    grid-template-columns:1fr 20px;
+    grid-template-rows: 20px 16px 1fr 10px 26px;
+  }
+}

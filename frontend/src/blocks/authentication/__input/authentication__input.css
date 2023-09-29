@@ -1,0 +1,17 @@
+.authentication__input {
+  min-width: 358px;
+  max-height: 27px;
+  padding: 0 0 13px 0;
+  box-sizing: border-box;
+  color: #ccc;
+  background-color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  resize: none;
+}

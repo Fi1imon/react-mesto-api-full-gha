@@ -1,0 +1,17 @@
+.popup-image__name {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  grid-column: 3/4;
+  grid-row: 5/6;
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 629px){
+  .popup-image__name {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+}

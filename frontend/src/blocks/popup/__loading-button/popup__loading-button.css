@@ -1,0 +1,15 @@
+.popup__loading-button {
+  min-width: 358px;
+  min-height: 50px;
+  margin: 38px auto 37px;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: default;
+  border-radius: 2px;
+  border: none;
+  display: none;
+}

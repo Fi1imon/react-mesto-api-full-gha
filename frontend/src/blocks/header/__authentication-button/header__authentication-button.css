@@ -1,0 +1,19 @@
+.header__authentication-button {
+  align-self: start;
+  border: none;
+  margin: 6px 0 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  max-width: 114px;
+  max-height: 22px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.header__authentication-button:hover {
+  opacity: .6;
+}

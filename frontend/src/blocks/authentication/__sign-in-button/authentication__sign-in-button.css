@@ -1,0 +1,13 @@
+.authentication__sign-in-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.authentication__sign-in-button:hover {
+  opacity: .6;
+}
