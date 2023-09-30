@@ -182,7 +182,9 @@ function App() {
         localStorage.setItem('jwt', res.token);
         auth.checkToken({ token: res.token })
           .then((res) => {
-            setLoggedIn(true);
+           setTimeout(() => {
+             setLoggedIn(true);
+           }, 0)
             setUserEmail(res.email)
           })
       })
