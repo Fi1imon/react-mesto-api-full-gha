@@ -179,10 +179,10 @@ function App() {
 
     auth.login({ email, password })
       .then((res) => {
-        setLoggedIn(true);
         localStorage.setItem('jwt', res.token);
         auth.checkToken({ token: res.token })
           .then((res) => {
+            setLoggedIn(true);
             setUserEmail(res.email)
           })
       })
