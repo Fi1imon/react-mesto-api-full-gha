@@ -46,7 +46,7 @@ function App() {
 
   React.useEffect(() => {
     if(loggedIn) {
-      api.getInitialCards()
+      api.getInitialCards({ token: localStorage.getItem('jwt') })
         .then((res) => {
           setInitialCards(res.cards)
         })
@@ -182,10 +182,8 @@ function App() {
         localStorage.setItem('jwt', res.token);
         auth.checkToken({ token: res.token })
           .then((res) => {
-           setTimeout(() => {
-             setLoggedIn(true);
-           }, 0)
-            setUserEmail(res.email)
+            setLoggedIn(true);
+            setUserEmail(res.email);
           })
       })
       .catch((err) => {

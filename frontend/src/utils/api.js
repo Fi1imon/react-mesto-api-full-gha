@@ -1,7 +1,6 @@
 export class Api {
-  constructor({ baseUrl, headers }) {
+  constructor({ baseUrl }) {
     this._baseUrl = baseUrl;
-    this._headers = headers;
   }
 
   _isOk = (res) => {
@@ -17,6 +16,8 @@ export class Api {
   }
 
   getUserInfo({ token }) {
+    this._token = token;
+
     return  this._request('users/me', {
       headers: {
         authorization: `Bearer ${token}`,
@@ -25,16 +26,22 @@ export class Api {
     })
   }
 
-  getInitialCards() {
+  getInitialCards({ token }) {
     return  this._request('cards', {
-      headers: this._headers
+      headers: {
+        authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      }
     })
   }
 
   setUserInfo({name, about}) {
     return  this._request('users/me', {
       method: 'PATCH',
-      headers: this._headers,
+      headers:  {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name,
         about
@@ -42,10 +49,13 @@ export class Api {
     })
   }
 
-  addCard({title, imageUrl, token}) {
+  addCard({title, imageUrl}) {
     return  this._request('cards', {
       method: 'POST',
-      headers: this._headers,
+      headers:  {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name: title,
         link: imageUrl
@@ -56,21 +66,30 @@ export class Api {
   deleteCard(cardId) {
     return  this._request(`cards/${cardId}`, {
       method: 'DELETE',
-      headers: this._headers
+      headers:  {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
     })
   }
 
   toggleLike(cardId, isLiked) {
     return  this._request(`cards/${cardId}/likes`, {
       method: isLiked ? 'DELETE' : 'PUT',
-      headers: this._headers
+      headers:  {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
     })
   }
 
   uploadAvatar({imageUrl}) {
     return  this._request('users/me/avatar', {
       method: 'PATCH',
-      headers: this._headers,
+      headers:  {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         avatar: imageUrl
       })
@@ -79,10 +98,6 @@ export class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://api.mesto.fi1imon.nomoredomainsrocks.ru',
-  headers: {
-    authorization: `Bearer ${localStorage.getItem('jwt')}`,
-    'Content-Type': 'application/json'
-  }
+  baseUrl: 'https://api.mesto.fi1imon.nomoredomainsrocks.ru'
 })
 export default api;
